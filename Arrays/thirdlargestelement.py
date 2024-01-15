@@ -21,9 +21,17 @@ class Solution:
                 print("There is no third largest element.")
             else:
                 return third
+            
+    def secondLargest(self, a, n):
+        if n<2:
+            return -1
+        else:
+            a.sort()
+            return a[-2]
+        
                     
 
 if __name__ == '__main__':
     size = int(input())
     arr = list(map(int, input().strip().split()))
-    print(Solution().thirdLargest(arr, size))
+    print(Solution().secondLargest(arr, size))
